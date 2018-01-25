@@ -68,7 +68,7 @@ class Scene {
 
     this._preventRender = false; // prevent multiple render per frame
     this._drawFullScene = false; // render everything on the rtt
-    this._autoMatrix = opts.scalecenter; // scale and center the imported meshes
+    this._autoMatrix = true; // scale and center the imported meshes
     this._vertexSRGB = true; // srgb vs linear colorspace for vertex color
   }
 
@@ -94,7 +94,7 @@ class Scene {
 
     var modelURL = getOptionsURL().modelurl;
     if (modelURL) this.addModelURL(modelURL);
-    else this.addSphere();
+    // else this.addSphere();
   }
 
   addModelURL(url) {

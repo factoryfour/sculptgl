@@ -17,6 +17,7 @@
     "raw-loader": "^0.5.1",
     "uglifyjs-webpack-plugin": "^1.1.2",
     "webpack": "^3.9.1",
+    "webpack-dev-server": "^2.11.1",
     "yagui": "^2.0.0"
   },
   "devDependencies": {
@@ -26,7 +27,8 @@
     "dev": "cp tools/index.dev.html app/index.html && cp tools/authSuccess.html app/authSuccess.html && webpack -w",
     "release": "rm -f app/sculptgl.js.map && cp tools/index.release.html app/index.html && cp tools/authSuccess.html app/authSuccess.html && webpack --env.release",
     "buildElectron": "yarn release && rm -rf standalone/app/ && cp -R app/ standalone/ && cp package.json standalone",
-    "standalone": "yarn buildElectron && cd standalone && node buildStandalone.js"
+    "standalone": "yarn buildElectron && cd standalone && node buildStandalone.js",
+    "web": "cp tools/index.dev.html app/index.html && cp tools/authSuccess.html app/authSuccess.html && webpack-dev-server --port 3000"
   },
   "repository": {
     "type": "git",

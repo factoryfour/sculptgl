@@ -21,7 +21,8 @@ module.exports = function (env) {
         test: /\.glsl$/,
         loader: 'raw-loader'
       }]
-    }
+    },
+    // devtool: "inline-source-map"
   };
 
   var isRelease = env && env.release;

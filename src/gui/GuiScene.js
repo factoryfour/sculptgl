@@ -17,10 +17,10 @@ class GuiScene {
 
     // scene
     menu.addButton(TR('sceneReset'), this._main, 'clearScene' /*, 'CTRL+ALT+N'*/ );
-    menu.addButton(TR('sceneAddSphere'), this._main, 'addSphere');
-    menu.addButton(TR('sceneAddCube'), this._main, 'addCube');
-    menu.addButton(TR('sceneAddCylinder'), this._main, 'addCylinder');
-    menu.addButton(TR('sceneAddTorus'), this._main, 'addTorus');
+    // menu.addButton(TR('sceneAddSphere'), this._main, 'addSphere');
+    // menu.addButton(TR('sceneAddCube'), this._main, 'addCube');
+    // menu.addButton(TR('sceneAddCylinder'), this._main, 'addCylinder');
+    // menu.addButton(TR('sceneAddTorus'), this._main, 'addTorus');
 
     // menu.addTitle(TR('Torus'));
     // menu.addSlider(TR('Arc'), this._main._torusRadius, this.updateTorusRadius.bind(this), 0.01, Math.PI * 2, 0.001);
@@ -42,7 +42,7 @@ class GuiScene {
     this._ctrlMerge.setVisibility(false);
 
     // extra
-    menu.addTitle(TR('renderingExtra'));
+    // menu.addTitle(TR('renderingExtra'));
     menu.addCheckbox(TR('darkenUnselected'), ShaderBase.darkenUnselected, this.onDarkenUnselected.bind(this));
     menu.addCheckbox(TR('contourShow'), this._main._showContour, this.onShowContour.bind(this));
     menu.addCheckbox(TR('renderingGrid'), this._main._showGrid, this.onShowGrid.bind(this));
